@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <h1>Understanding Set Inverval and Clear Interval</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+    
+</body>
+
+<script>
+    const time = new Date
+    let stop
+    function task(){
+        const time = new Date
+        console.log('The time is:', time.toLocaleTimeString())
+
+    }
+
+    function start(){
+        stop = setInterval(task, 1000)
+    }
+    
+    document.querySelector('#start').addEventListener('click', start)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(stop)
+    })
+
+</script>
+
+</html>

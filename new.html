@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+
+<script>
+
+    const h1 = document.createElement('h1')
+    const h2 = document.createElement('h2')
+    h1.innerHTML = "DOM Manipulation"
+    h2.innerHTML = "Sexiest Porn Stars!"
+    const div = document.createElement('div')
+    const ul = document.createElement('ul')
+    // div.style.backgroundColor = "green"
+    // div.style.padding = "12px"
+
+    function makechild(n, element, attachel, names){
+        for(let i=0; i<n; i++){
+            const li = document.createElement(element)
+            attachel.appendChild(li)
+            // li.innerHTML = names[i]
+            const text = document.createTextNode(names[i])
+            li.appendChild(text)
+        }
+        attachel.firstElementChild.style.color = 'red'
+    }
+    makechild(5, 'li', ul, ["Lana Rhoades", "Abella Danger", "Dani Daniels", "Sophie Dee", "Kimmy Granger"])
+
+    div.appendChild(ul)
+    
+    
+    
+    
+    document.body.appendChild(h1)
+    document.body.appendChild(h2)
+    document.body.appendChild(div)
+     
+
+
+</script>
+
+
+</html>
