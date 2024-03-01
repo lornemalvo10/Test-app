@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+
+    <button>Button Clicked</button>
+    
+</body>
+
+<script>
+
+    class React{
+        constructor(){
+            this.username = 'Suraj'
+            this.server = 'https//netflix.com'
+
+            document.querySelector('button').addEventListener('click', this.click.bind(this))
+        }
+
+        click(){
+            console.log(' ')
+            console.log(this.kuchbhi)
+        }
+    }
+
+    new React()
+
+</script>
+
+</html>
